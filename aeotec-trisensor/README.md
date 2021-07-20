@@ -11,40 +11,28 @@ Model: ZWA005-(A, B and C)
 5. The Alpha firmware installed on your Hub.
 
 ## Installation
-1. Clone this repository in a local directory.
-2. Open a terminal and go to this repository's directory. 
-3. Build and upload the Driver package with this command:
-```
-smartthings edge:drivers:package ./
-```
-You will receive as a response the Driver's ID, name, and package key.
-
-4. Use the below command to install the driver. When prompted, select the corresponding [Hub device ID](https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevices) and the Driver's package.
-```
-smartthings edge:drivers:install
-```
-5. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
-6. From a computer on the same local network as your hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+1. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+2. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 ```
 smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
-7. Open the SmartThings App and go to the location where the hub is installed.
+3. Open the SmartThings App and go to the location where the hub is installed.
 
     a. Go to Add (+) > Device
     
-    b. Reset your device back to the pairing mode.
+    b. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
     
-    c. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
+4. Put your device in pairing mode; the specifications will vary by manufacturer (for the [Aeotec Trisensor]((https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2919/TriSensor%20user%20manual%2020180416.pdf)), press the device’s action button once).  
+5. After a few seconds, the secure setup option will appear, click on it to start the inclusion process.
+6. Select the room where your device will be installed and tap on “next”
+7. If you have access to a QR code, scan it. Otherwise, click on “enter pin code instead” and enter the first 5 digits of the DSK (In the Aeotec Trisensor, it’s located in the internal part of the battery cover.)
+8. Select “add device” and stay on this page until the "infoChanged" life cycle is received and the Driver starts getting the `REPORT` commands from the device.
 
-8. Put your device in pairing mode by pressing the device’s action button once. The green led will be on. 
-
-_Note: If the purple led is on, it means the device wasn’t removed from the previous Z-Wave network. (Check the [User’s manual](https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2919/TriSensor%20user%20manual%2020180416.pdf) for the exclusion or reset instructions)_
-
-9. The Hub will search for available devices and after a few seconds, the secure setup option will appear, click on it.
-10. Select the room where your device will be installed and click on “next”
-11. If you have access to a QR code, scan it. Otherwise, click on “enter pin code instead” and enter the first 5 digits of the DSK (located in the internal part of the device’s battery cover.)
-12. Select “add device”, if the inclusion was successful, the device's white and green led will flash 
-13. Stay on this page until the "infoChanged" life cycle is received and the Driver starts getting the `REPORT` commands from the device.
+Example Output
+```
+<ZwaveDevice: deviceId [3C] (Aeotec Trisensor A)> received Z-Wave command: {args={alarm_level=0, alarm_type=0, event="MOTION_DETECTION", event_parameter="", notification_status="ON", notification_type="HOME_SECURITY", v1_alarm_level=0, v1_alarm_type=0, z_wave_alarm_event=8, z_wave_alarm_status="ON", z_wave_alarm_type="BURGLAR", zensor_net_source_node_id=0}, cmd_class="NOTIFICATION", cmd_id="REPORT", dst_channels={}, encap="S2_AUTH", payload="\x00\x00\x00\xFF\x07\x08\x00", src_channel=0, version=3}
+```
+9. Select the device to enter its details. If the sensor detects motion, the SmartThings app should display this status
 
 ## Modify the device's preferences
 This Driver allows you to change 3 configuration parameters of the device:

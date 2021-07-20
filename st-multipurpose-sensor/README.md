@@ -9,32 +9,24 @@ Model: IM6001-MPP04
 4. A SmartThings Multipurpose sensor (Zigbee).
 5. The Alpha firmware installed on your Hub.
 
-## Installation
-1. Clone this repository in a local directory.
-2. Open a terminal and go to this repository's directory. 
-3. Build and upload the Driver package with this command:
-```
-smartthings edge:drivers:package ./
-```
-You will receive as a response the Driver's ID, name, and package key.
-
-4. Use the below command to install the driver. When prompted, select the corresponding [Hub device ID](https://smartthings.developer.samsung.com/docs/api-ref/st-api.html#operation/getDevices) and the Driver's package.
-```
-smartthings edge:drivers:install
-```
-5. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
-6. From a computer on the same local network as your hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+## Onboarding your New Device
+1. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+2. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 ```
 smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
-7. Open the SmartThings App and go to the location where the hub is installed.
+3. Open the SmartThings App and go to the location where the hub is installed.
 
     a. Go to Add (+) > Device
     
-    b. Reset your device back to the pairing mode.
-    
-    c. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
-    
-8. In the logs, you will see the RX and TX messages as part of the communication with the device.
-9. You shouldn't see any errors in the driver's logs (including the "UNSUPPORTED" response to any TX message). This means the device was added and the event will be received successfully.
+    b. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
 
+4. Put your device in pairing mode; the specifications will vary by manufacturer (for the SmartThings Multi, press the device’s reset button once). 
+5. Keep the terminal view open until you see only reporting values messages in the logs.
+
+Example Output
+```
+<ZigbeeDevice: device-id [source-id] (Multipurpose Sensor f1)> emitting event: {"attribute_id":"temperature","component_id":"main","state":{"unit":"C","value":28.66},"capability_id":"temperatureMeasurement"}
+```
+
+If your Device paired correctly and the Driver was applied, you should not see any errors in the logs (including "UNSUPPORTED" responses to any Zigbee TX message). You can validate this by opening the SmartThings app and controlling and/or viewing all of the devices Capabilities (e.g., open/close or change the temperature).
