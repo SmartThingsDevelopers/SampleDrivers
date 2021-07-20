@@ -12,25 +12,26 @@
 
 ### Software Set up
 
-1. Software requirements:
+1.  Software requirements:
+
     - [esptool.py](https://github.com/espressif/esptool#esptoolpy)
     - [NodeMCU-Tool](https://github.com/AndiDittrich/NodeMCU-Tool#nodemcu-tool).
     - Linux `screen` command installed for serial communication.
 
     If you have issues with any of the above mentioned tools, you can refer to these alternatives:
 
-      - For serial communication, you use [picocom](https://github.com/npat-efault/picocom#picocom) or [minicom](https://github.com/Distrotech/minicom).
-      - To embed the app you can use [ESPlorer](https://github.com/4refr0nt/ESPlorer).
+    - For serial communication, you use [picocom](https://github.com/npat-efault/picocom#picocom) or [minicom](https://github.com/Distrotech/minicom).
+    - To embed the app you can use [ESPlorer](https://github.com/4refr0nt/ESPlorer).
 
-1. Create at NodeMCU firmware at [NodeMCU Build](https://nodemcu-build.com/):
+1.  Create at NodeMCU firmware at [NodeMCU Build](https://nodemcu-build.com/):
+
     - Specify an email where you'll get the firmware binaries.
     - It must point to the `release` branch of the [NodeMCU](https://github.com/nodemcu/nodemcu-firmware/) repository.
     - Whitelist the following modules: `file`, `HTTP`, `net`, `node`, `pwm2`, `sjson`, `timer`, and `wifi`.
     - Wait until you get the binaries via email.
     - Once you receive them, download the one you prefer into the `app/` directory.
 
-
-1. Flash the firmware and test it.
+1.  Flash the firmware and test it.
 
     - Set permissions over the `/dev/ttyUSB0` port and register your linux user into the `dialog` group. This will allow you to use the `nodemcu-tool` properly:
 
@@ -69,11 +70,11 @@
           build 2021-05-26 18:11 powered by Lua 5.1.4 on SDK 3.0.1-dev(fce080e)
           >
 
-1. To upload the app into the device, exit the `screen` session _(`Ctrl + A, K, Y`)_ and then run the following command:
+1.  To upload the app into the device, exit the `screen` session _(`Ctrl + A, K, Y`)_ and then run the following command:
 
         nodemcu-tool upload app/src/*
 
-1. Open the _NodeMCU shell_ to monitor logs:
+1.  Open the _NodeMCU shell_ to monitor logs:
 
         sudo screen /dev/ttyUSB 115200
 
@@ -84,12 +85,12 @@ Access Point_ following these steps:
 
 1. Go to your phone's _Network Settings_ and locate the **LightBulb-ESP8266** network.
 2. One you're connected successfully, open your phone's browser and go to
-`192.168.4.1` to
-set up the credentials of your network.
+   `192.168.4.1` to
+   set up the credentials of your device's network _(refer to [./src/config.lua](./src/config.lua))_.
 3. At the `screen` session, you should see some logs as soon as your device gets
-authenticated at the access point.
+   authenticated at the access point.
 4. Switch back to your main network, to stay **synced with your Hub** and proceed to
-[install your driver](../driver/README.md).
+   [install your driver](../driver/README.md).
 
 ### Built-In Controller
 
