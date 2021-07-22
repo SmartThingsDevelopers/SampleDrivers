@@ -1,59 +1,55 @@
 # SmartThings Edge Drivers
 
 ## What is SmartThings Edge?
-SmartThings Edge is our new architecture that takes smart home events that would have happened on the SmartThings Cloud and moves them to your SmartThings Hub.
-Edge Drivers are [Lua©-based](https://www.lua.org/) and can be used for Zigbee, Z-Wave, and LAN devices.
-SmartThings Edge also brings new benefits such as reduced latency and cloud costs.
+SmartThings Edge is our new architecture for Hub Connected devices that uses Device Drivers to execute commands locally on SmartThings Hubs. Edge Drivers are [Lua©-based](https://www.lua.org/) and can be used for Hub Connected devices, including Zigbee, Z-Wave, and LAN protocols. SmartThings Edge will brings new benefits such as reduced latency and cloud costs.
+
 
 ## Getting Started
-In this repository, you’ll find different ready-to-install samples that can help you integrate your devices to the SmartThings platform and also create a driver of your own.
+In this repository, you’ll find different ready-to-install sample Edge Drivers that can help you integrate your devices to the SmartThings platform.
 
 Make sure you comply with the prerequisites and follow the Driver installation and Device onboarding instructions in the Community post of each sample.
 
-For more information regarding Edge Drivers, look at the resources in “More Information”
+For more information on building Edge Drivers, look at the resources in [More Information](#More-Information)
 
-## (Z-Wave) Aeotec Tri Sensor 
-This Driver helps you integrate the Aeotec’s Tri Sensor which includes the capabilities of:
-Motion Sensor
- - Illuminance Measurement
- - Temperature Measurement
-
-**Installation Tutorial**
-
-TODOLINK
-
-**Driver Source**
-
-[(Z-Wave) Aeotec Tri Sensor](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/st-multipurpose-sensor)
-
-## (LAN) RGB Light Bulb
-This Driver integrates an ESP8266 board via LAN. This device is configured to work as a RGB Light Bulb and uses these SmartThings capabilities:
- - Switch
- - Switch Level
- - Color Control
-
-**Installation Tutorial**
-
-TODOLINK
-
-**Driver Source**
-
-[(LAN) RGB Light Bulb](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/lightbulb-lan-esp8266)
-
-## (Zigbee) SmartThings Multipurpose sensor
-This Driver is used to integrate the indispensable SmartThings Multipurpose sensor which is composed by the following capabilities:
+## Zigbee SmartThings Multipurpose sensor
+Example integrating a SmartThings Multipurpose sensor, which is has the following Capabilities:
  - Contact Sensor
  - Temperature Measurement
  - Acceleration/Vibration Sensor
- - Three Axis sensor
+ - Three Axis Sensor
 
-**Installation Tutorial**
+[Code Sample](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/aeotec-trisensor)
 
-TODOLINK
+**TODO** Driver Sharing Link
 
-**Driver Source**
+## LAN RGB Light Bulb
+Example integrating an ESP8266 board via LAN. This device is configured to work as a RGB Light Bulb and uses the following Capabilities:
+  - Switch
+  - Switch Level
+  - Color Control
 
-[(Zigbee) SmartThings Multipurpose sensor](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/aeotec-trisensor)
+[Code Sample](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/lightbulb-lan-esp8266)
 
-## More information
+**TODO** Driver Sharing Link
+
+## Z-Wave Aeotec Tri Sensor
+Example integrating the Aeotec’s Tri Sensor which has the following Capabilities:
+ - Motion Sensor
+ - Illuminance Measurement
+ - Temperature Measurement
+
+[Code Sample](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/st-multipurpose-sensor)
+
+**TODO** Driver Sharing Link
+
+## Installation Tutorial
+
+**TODO** Documentation
+
+
+## More Information
 TODOLINK of the announcement and blog posts, to include the background information shared there
+
+## Support
+
+If you have any questions about the specification document, visit [community.smartthings.com](community.smartthings.com).
