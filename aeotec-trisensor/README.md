@@ -10,29 +10,39 @@ Model: ZWA005-(A, B and C)
 4. A SmartThings Multipurpose sensor (Zigbee).
 5. The Alpha firmware installed on your Hub.
 
-## Installation
-1. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
-2. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+## Uploading Your Driver to SmartThings
+1. Compile the driver:
+```
+       smartthings edge:drivers:package driver/
+```
+2. Install and select Hub after the prompt:
+```
+       smartthings edge:drivers:install <driver_id>
+```
+3. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+4. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 ```
 smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
-3. Open the SmartThings App and go to the location where the hub is installed.
+
+## Onboarding your New Device
+1. Open the SmartThings App and go to the location where the hub is installed.
 
     a. Go to Add (+) > Device
     
     b. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
     
-4. Put your device in pairing mode; the specifications will vary by manufacturer (for the [Aeotec Trisensor]((https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2919/TriSensor%20user%20manual%2020180416.pdf)), press the device’s action button once).  
-5. After a few seconds, the secure setup option will appear, click on it to start the inclusion process.
-6. Select the room where your device will be installed and tap on “next”
-7. If you have access to a QR code, scan it. Otherwise, click on “enter pin code instead” and enter the first 5 digits of the DSK (In the Aeotec Trisensor, it’s located in the internal part of the battery cover.)
-8. Select “add device” and stay on this page until the "infoChanged" life cycle is received and the Driver starts getting the `REPORT` commands from the device.
+2. Put your device in pairing mode; the specifications will vary by manufacturer (for the [Aeotec Trisensor]((https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2919/TriSensor%20user%20manual%2020180416.pdf)), press the device’s action button once).  
+3. After a few seconds, the secure setup option will appear, click on it to start the inclusion process.
+4. Select the room where your device will be installed and tap on “next”
+5. If you have access to a QR code, scan it. Otherwise, click on “enter pin code instead” and enter the first 5 digits of the DSK (In the Aeotec Trisensor, it’s located in the internal part of the battery cover.)
+6. Select “add device” and stay on this page until the "infoChanged" life cycle is received and the Driver starts getting the `REPORT` commands from the device.
 
 Example Output
 ```
 <ZwaveDevice: deviceId [3C] (Aeotec Trisensor A)> received Z-Wave command: {args={alarm_level=0, alarm_type=0, event="MOTION_DETECTION", event_parameter="", notification_status="ON", notification_type="HOME_SECURITY", v1_alarm_level=0, v1_alarm_type=0, z_wave_alarm_event=8, z_wave_alarm_status="ON", z_wave_alarm_type="BURGLAR", zensor_net_source_node_id=0}, cmd_class="NOTIFICATION", cmd_id="REPORT", dst_channels={}, encap="S2_AUTH", payload="\x00\x00\x00\xFF\x07\x08\x00", src_channel=0, version=3}
 ```
-9. Select the device to enter its details. If the sensor detects motion, the SmartThings app should display this status
+7. Select the device to enter its details. If the sensor detects motion, the SmartThings app should display this status
 
 ## Modify the device's preferences
 This Driver allows you to change 3 configuration parameters of the device:
