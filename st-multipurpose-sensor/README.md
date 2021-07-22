@@ -9,20 +9,30 @@ Model: IM6001-MPP04
 4. A SmartThings Multipurpose sensor (Zigbee).
 5. The Alpha firmware installed on your Hub.
 
-## Onboarding your New Device
-1. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
-2. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+## Uploading Your Driver to SmartThings
+1. Compile the driver:
+```
+       smartthings edge:drivers:package driver/
+```
+2. Install and select Hub after the prompt:
+```
+       smartthings edge:drivers:install <driver_id>
+```
+3. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+4. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 ```
 smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
-3. Open the SmartThings App and go to the location where the hub is installed.
+
+## Onboarding your New Device
+1. Open the SmartThings App and go to the location where the hub is installed.
 
     a. Go to Add (+) > Device
     
     b. Select Scan nearby (If you have more than one, select the corresponding Hub as well)
 
-4. Put your device in pairing mode; the specifications will vary by manufacturer (for the SmartThings Multi, press the device’s reset button once). 
-5. Keep the terminal view open until you see only reporting values messages in the logs.
+2. Put your device in pairing mode; the specifications will vary by manufacturer (for the SmartThings Multi, press the device’s reset button once). 
+3. Keep the terminal view open until you see only reporting values messages in the logs.
 
 Example Output
 ```
