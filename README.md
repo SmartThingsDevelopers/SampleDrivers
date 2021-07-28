@@ -17,7 +17,6 @@ Example integrating a SmartThings Multipurpose sensor, which is has the followin
 
 [Sample Code](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/st-multipurpose-sensor)
 
-**TODO** Driver's Tutorial Community post
 
 ## LAN RGB Light Bulb
 Example integrating an ESP8266 board via LAN. This device is configured to work as a RGB Light Bulb and uses the following Capabilities:
@@ -25,9 +24,8 @@ Example integrating an ESP8266 board via LAN. This device is configured to work 
   - Switch Level
   - Color Control
 
-[Code Sample](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/lightbulb-lan-esp8266)
+[Sample Code](https://github.com/SmartThingsDevelopers/DeviceDrivers/blob/main/lightbulb-lan-esp8266)
 
-**TODO** Driver's Tutorial Community post
 
 ## Z-Wave Aeotec Tri Sensor
 Example integrating the Aeotec’s Tri Sensor which has the following Capabilities:
@@ -49,9 +47,9 @@ Make sure you have the following:
    c. You've installed the [LightBulb App](https://github.com/SmartThingsDevelopers/DeviceDrivers/tree/main/lightbulb-lan-esp8266/app) in the ESP8266 NodeMCU board and it's wired according to the [schematics](https://github.com/SmartThingsDevelopers/DeviceDrivers/tree/main/lightbulb-lan-esp8266/app#schematics) (LAN Lightbulb)
 
 You'll find further installation instructions in each sample and in the Tutorial Community posts:
-* **TODO** Zigbee SmartThings Multipurpose sensor Tutorial
-* **TODO** LAN RGB Light Bulb Tutorial
-* **TODO** Z-Wave Aeotec Tri Sensor Tutorial
+* [Zigbee SmartThings Multipurpose sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)
+* [LAN RGB Light Bulb Tutorial](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501)
+* [Z-Wave Aeotec Tri Sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
 
 ## More Information
 TODOLINK of the announcement and blog posts, to include the background information shared there
