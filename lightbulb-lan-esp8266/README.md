@@ -12,3 +12,7 @@ example than a _Switch-based_ device integration.
 
 - [LightBulb App](./app).
 - [ST Edge Driver](./driver).
+
+
+## Installation Tutorial
+Take a look at the installation tutorial in our [Developer's Community](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501).

@@ -1,5 +1,6 @@
 # st-multipurpose-sensor-driver
 Driver for the SmartThings Multipurpose Sensor (Zigbee)
+
 Model: IM6001-MPP04
 
 ## Prerequisites 
@@ -10,6 +11,8 @@ Model: IM6001-MPP04
 5. The Alpha firmware installed on your Hub.
 
 ## Uploading Your Driver to SmartThings
+_Note: Take a look at the installation tutorial in our [Developer's Community](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)._
+
 1. Compile the driver:
 ```
        smartthings edge:drivers:package driver/

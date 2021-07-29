@@ -11,6 +11,8 @@ Model: ZWA005-(A, B and C)
 5. The Alpha firmware installed on your Hub.
 
 ## Uploading Your Driver to SmartThings
+_Note: Take a look at the installation tutorial in our [Developer's Community](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)._
+
 1. Compile the driver:
 ```
        smartthings edge:drivers:package driver/
