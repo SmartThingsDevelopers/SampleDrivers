@@ -52,7 +52,7 @@ You'll find further installation instructions in each sample and in the Tutorial
 * [Z-Wave Aeotec Tri Sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
 
 ## More Information
-TODOLINK of the announcement and blog posts, to include the background information shared there
+Take a look at the announcement of [SmartThings Edge](https://community.smartthings.com/t/announcing-smartthings-edge/229555) in our Community.
 
 ## Support
 If you have any questions about the specification document, visit [community.smartthings.com](community.smartthings.com).
