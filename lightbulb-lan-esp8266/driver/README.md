@@ -1,11 +1,15 @@
 # LAN Driver for ESP8266 LightBulb
 
-### Software Requirements
+### Prerequisites
 
-1. Latest version of the [SmartThings CLI](https://github.com/SmartThingsCommunity/smartthings-cli).
-1. [Edge Alpha CLI Plugin](https://github.com/SmartThingsCommunity/edge-alpha-cli-plugin#smartthings-edge-alpha-cli-plugin).
+Any version SmartThings Hub with firmware version 38.x or greater and a LAN device ready to connect.
 
-### Setup
+For this tutorial, we used an ESP8266 but the same principles can be used to integrate any LAN-based device that supports SSDP and HTTP.
+
+1. Setup the [SmartThings CLI](https://github.com/SmartThingsCommunity/smartthings-cli) according to the [configuration document](https://github.com/SmartThingsCommunity/smartthings-cli/blob/master/packages/cli/doc/configuration.md).
+1. Install the [Edge CLI Plugin](https://github.com/SmartThingsCommunity/edge-alpha-cli-plugin#smartthings-edge-alpha-cli-plugin).
+
+### Uploading your Driver to SmartThings
 
 1.  Compile the driver:
 
