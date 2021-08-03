@@ -37,8 +37,9 @@ Example integrating the Aeotec’s Tri Sensor which has the following Capabiliti
 
 ## Installation Tutorial
 Make sure you have the following:
-1. A SmartThings Hub with firmware version 38.x or greater
-2. A compatible device ready to be integrated:
+1. The latest version of the SmartThings app ([Android](https://play.google.com/store/apps/details?id=com.samsung.android.oneconnect) | [iOS](https://apps.apple.com/us/app/smartthings/id1222822904))
+2. A SmartThings Hub with firmware version 38.x or greater
+3. A compatible device ready to be integrated:
 
    a. Battery's level is enough for the device functionality (Zigbee Multi Sensor and Aeotec Tri Sensor)
    
