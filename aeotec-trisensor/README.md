@@ -32,7 +32,7 @@ _Note: Take a look at the installation tutorial in our [Developer's Community](h
 4. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 
 ```
-smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
+       smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
 
 ## Onboarding your New Device
@@ -46,7 +46,7 @@ smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 
 Example Output
 
-```
+```text
 <ZwaveDevice: deviceId [3C] (Aeotec Trisensor A)> received Z-Wave command: {args={alarm_level=0, alarm_type=0, event="MOTION_DETECTION", event_parameter="", notification_status="ON", notification_type="HOME_SECURITY", v1_alarm_level=0, v1_alarm_type=0, z_wave_alarm_event=8, z_wave_alarm_status="ON", z_wave_alarm_type="BURGLAR", zensor_net_source_node_id=0}, cmd_class="NOTIFICATION", cmd_id="REPORT", dst_channels={}, encap="S2_AUTH", payload="\x00\x00\x00\xFF\x07\x08\x00", src_channel=0, version=3}
 ```
 
