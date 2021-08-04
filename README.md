@@ -9,7 +9,7 @@ In this repository, you’ll find different ready-to-install sample Edge Drivers
 For more information on building Edge Drivers, look at the resources in [More Information](#More-Information)
 
 ## Zigbee SmartThings Multipurpose sensor
-Example integrating a SmartThings Multipurpose sensor, which is has the following Capabilities:
+Example integrating a SmartThings Multipurpose sensor, which has the following Capabilities:
  - Contact Sensor
  - Temperature Measurement
  - Acceleration/Vibration Sensor
@@ -19,7 +19,7 @@ Example integrating a SmartThings Multipurpose sensor, which is has the followin
 
 
 ## LAN RGB Light Bulb
-Example integrating an ESP8266 board via LAN. This device is configured to work as a RGB Light Bulb and uses the following Capabilities:
+Example integrating an ESP8266 board via LAN. This device is configured to work as a RGB Light Bulb and has the following Capabilities:
   - Switch
   - Switch Level
   - Color Control
@@ -53,7 +53,7 @@ You'll find further installation instructions in each sample and in the Tutorial
 * [Z-Wave Aeotec Tri Sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
 
 ## More Information
-TODOLINK of the announcement and blog posts, to include the background information shared there
+Take a look at the announcement of [SmartThings Edge](https://community.smartthings.com/t/announcing-smartthings-edge/229555) in our Community.
 
 ## Support
 If you have any questions about the specification document, visit [community.smartthings.com](community.smartthings.com).
