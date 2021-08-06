@@ -8,7 +8,7 @@ control of our devices)_, we share this Light Bulb sample to integrate an ESP826
 ### Index
 
 - [LightBulb App](./app).
-- [ST Edge Driver](./driver).
+- [Lan Driver](./driver).
 
 ## Installation Tutorial
 
