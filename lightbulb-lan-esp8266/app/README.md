@@ -10,9 +10,9 @@
 
 <img src="./doc/esp8266-rgb-schematic.png" alt="esp8266-schematic" width="500"/>
 
-### Software Set up
+## Prerequisites
 
-1.  Software requirements:
+1.  Development Tools:
 
     - [esptool.py](https://github.com/espressif/esptool#esptoolpy)
     - [NodeMCU-Tool](https://github.com/AndiDittrich/NodeMCU-Tool#nodemcu-tool).
@@ -20,7 +20,7 @@
 
     If you have issues with any of the above mentioned tools, you can refer to these alternatives:
 
-    - For serial communication, you use [picocom](https://github.com/npat-efault/picocom#picocom) or [minicom](https://github.com/Distrotech/minicom).
+    - For serial communication, you use either [picocom](https://github.com/npat-efault/picocom#picocom) or [minicom](https://github.com/Distrotech/minicom).
     - To embed the app you can use [ESPlorer](https://github.com/4refr0nt/ESPlorer).
 
 1.  Create at NodeMCU firmware at [NodeMCU Build](https://nodemcu-build.com/):
@@ -28,12 +28,11 @@
     - Specify an email where you'll get the firmware binaries.
     - It must point to the `release` branch of the [NodeMCU](https://github.com/nodemcu/nodemcu-firmware/) repository.
     - Whitelist the following modules: `file`, `HTTP`, `net`, `node`, `pwm2`, `sjson`, `timer`, and `wifi`.
-    - Wait until you get the binaries via email.
-    - Once you receive them, download the one you prefer into the `app/` directory.
+    - Wait until you get the binaries via email and once you receive them, download the one that ends with `float.bin` into the `app/` directory.
 
 1.  Flash the firmware and test it.
 
-    - Set permissions over the `/dev/ttyUSB0` port and register your linux user into the `dialog` group. This will allow you to use the `nodemcu-tool` properly:
+    - Set permissions over the `/dev/ttyUSB0` port and register your linux user into the `dialog` group. This will allow you to use the `nodemcu-tool` properly _(if it fails, reboot your computer to refresh the system changes)_:
 
           sudo chmod -R 777 /dev/ttyUSB0
           sudo usermod -a -G dialout <user>
@@ -49,7 +48,7 @@
 
           esptool.py --port /dev/ttyUSB0 \
           write_flash 0x00000 \
-          ./firmware/nodemcu-release-9-modules-XXXX-XX-XX-XX-XX-XX-float.bin
+          app/nodemcu-release-9-modules-XXXX-XX-XX-XX-XX-XX-float.bin
 
     - Open the _NodeMCU shell_:
 
