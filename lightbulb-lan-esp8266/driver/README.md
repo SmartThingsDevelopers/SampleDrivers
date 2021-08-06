@@ -1,4 +1,8 @@
-# LAN Driver for custom ESP8266 LightBulb
+# Sample Edge Driver for ESP8266 Light bulb
+
+Model: NodeMCU ESP8266
+
+Protocol: LAN
 
 ## Prerequisites
 
@@ -6,27 +10,33 @@ Any version SmartThings Hub with firmware version 38.x or greater and a LAN devi
 
 For this tutorial, we used an ESP8266 but the same principles can be used to integrate any LAN-based device that supports SSDP and HTTP.
 
-1. Setup the [SmartThings CLI](https://github.com/SmartThingsCommunity/smartthings-cli) according to the [configuration document](https://github.com/SmartThingsCommunity/smartthings-cli/blob/master/packages/cli/doc/configuration.md).
-1. Install the [Edge CLI Plugin](https://github.com/SmartThingsCommunity/edge-alpha-cli-plugin#smartthings-edge-alpha-cli-plugin).
+1. Set up the SmartThings CLI according to the [configuration document](https://github.com/SmartThingsCommunity/smartthings-cli/blob/master/packages/cli/doc/configuration.md).
+2. Add the [Edge Driver plugin](https://github.com/SmartThingsCommunity/edge-alpha-cli-plugin#set-up) to the CLI.
+3. Configure your development environment for the [SmartThingsEdgeDrivers](https://github.com/SmartThingsCommunity/SmartThingsEdgeDriversBeta)
+4. A SmartThings hub with firmware version 000.038.000XX or greater and an Aeotec Trisensor.
 
-## Uploading your Driver to SmartThings
+## Uploading Your Driver to SmartThings
 
-1.  Compile the driver:
+_Note: Take a look at the installation tutorial in our [Developer's Community](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)._
 
-```
-    smartthings edge:drivers:package driver/
-```
-
-2.  Install the driver and follow the prompt:
+1. Compile the driver:
 
 ```
-    smartthings edge:drivers:install <driver_id>
+       smartthings edge:drivers:package driver/
 ```
 
-3. Use your WiFi router or the **[SmartThings IDE](https://account.smartthings.com/) > My Hubs** to locate and copy the IP Address for your Hub and run the _logcat_ command to connect to your Hub and begin listening to the Driver logs:
+2. Install and select Hub after the prompt:
 
 ```
-  smartthings edge:drivers:logcat --hub-address 192.168.X.XX <driver_id>
+       smartthings edge:drivers:install <driver_id>
+```
+
+3. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+
+4. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+
+```
+       smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
 
 ## Onboarding your New Device
