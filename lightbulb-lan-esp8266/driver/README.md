@@ -25,15 +25,35 @@ _Note: Take a look at the installation tutorial in our [Developer's Community](h
        smartthings edge:drivers:package driver/
 ```
 
-2. Install and select Hub after the prompt:
+2. Next, create a channel for your driver
 
 ```
-       smartthings edge:drivers:install <driver_id>
+smartthings edge:channels:create
 ```
 
-3. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+3. Enroll your driver into the channel
 
-4. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
+```
+smartthings edge:channels:enroll
+```
+
+4. Publish your driver to the channel
+
+```
+smartthings edge:drivers:publish
+```
+
+5. If the package was successfully created, you can call the command below and follow the on-screen prompts to install the Driver in your Hub:
+
+```
+       smartthings edge:drivers:install
+```
+
+You should see the confirmation message: "Driver {driver-id} installed to Hub {hub-id}"
+
+6. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
+
+7. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 
 ```
        smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
