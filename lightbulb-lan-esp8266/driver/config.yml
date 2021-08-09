@@ -1,4 +1,4 @@
-name: 'LAN-LightBulb'
+name: 'LAN LightBulb'
 packageKey: 'LAN-LightBulb'
 permissions:
   lan: {}
