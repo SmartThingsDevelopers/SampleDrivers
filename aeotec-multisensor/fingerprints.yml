@@ -1,0 +1,6 @@
+zwaveManufacturer:
+  - id: "Aeotec/ZW100-X"
+    deviceLabel: Aeotec MultiSensor 6
+    manufacturerId: 0x0086
+    productId: 0x0064
+    deviceProfileName: aeotec-multisensor-pr
