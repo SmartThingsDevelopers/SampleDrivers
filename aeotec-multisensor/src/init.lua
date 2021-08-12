@@ -8,9 +8,10 @@ local log = require "log"
 
 
 local ZWAVE_MOTION_TEMP_LIGHT_SENSOR_FINGERPRINTS = {
-  {mfr = 0x0371, prod = 0x0002, model = 0x0005}, -- ZW005-C EU Aeotec TriSensor
-  {mfr = 0x0371, prod = 0x0102, model = 0x0005}, -- ZW005-A US Aeotec TriSensor
-  {mfr = 0x0371, prod = 0x0202, model = 0x0005}  -- ZW005-B AU Aeotec TriSensor
+  {mfr = 0x0086, prod = 0x0002, model = 0x0064}, -- ZW100-C EU Aeotec MultiSensor
+  {mfr = 0x0086, prod = 0x0102, model = 0x0064}, -- ZW100-A US Aeotec MultiSensor
+  {mfr = 0x0086, prod = 0x0202, model = 0x0064},  -- ZW100-B AU Aeotec MultiSensor
+  {mfr = 0x0086, prod = 0x0A02, model = 0x0064}  -- ZW100-G JP Aeotec MultiSensor
 }
 
 local function can_handle_zwave_motion_temp_light_sensor(opts, driver, device, ...)
@@ -80,7 +81,7 @@ local driver_template = {
   lifecycle_handlers = {
     init = init_dev
   },
-  NAME = "zwave aeotec trisensor",
+  NAME = "zwave aeotec multisensor",
   can_handle = can_handle_zwave_motion_temp_light_sensor,
 }
 
@@ -90,5 +91,5 @@ local driver_template = {
 ]]--
 
 defaults.register_for_default_handlers(driver_template, driver_template.supported_capabilities)
-local triSensor = ZwaveDriver("zwave-aeotec-trisensor", driver_template)
-triSensor:run()
+local multiSensor = ZwaveDriver("zwave-aeotec-multisensor", driver_template)
+multiSensor:run()

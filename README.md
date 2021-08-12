@@ -30,15 +30,15 @@ Example integrating an ESP8266 board via LAN. This device is configured to work 
 
 [Sample Code](./lightbulb-lan-esp8266/driver)
 
-## Z-Wave Aeotec Tri Sensor
+## Z-Wave Aeotec MultiSensor 6
 
-Example integrating the Aeotec’s Tri Sensor which has the following Capabilities:
+Example integrating the Aeotec’s MultiSensor 6 which has the following Capabilities:
 
 - Motion Sensor
 - Illuminance Measurement
 - Temperature Measurement
 
-[Sample Code](./aeotec-trisensor)
+[Sample Code](./aeotec-multisensor)
 
 ## Installation Tutorial
 
@@ -48,9 +48,9 @@ Make sure you have the following:
 2. A SmartThings Hub with firmware version 38.x or greater
 3. A compatible device ready to be integrated:
 
-   a. Battery's level is enough for the device functionality (Zigbee Multi Sensor and Aeotec Tri Sensor)
+   a. Battery's level is enough for the device functionality (Zigbee Multi Sensor and Aeotec MultiSensor 6)
 
-   b. The device was previously excluded from the Z-Wave network or is a fresh installation (Aeotec Tri Sensor)
+   b. The device was previously excluded from the Z-Wave network or is a fresh installation (Aeotec MultiSensor 6)
 
    c. You've installed the [LightBulb App](https://github.com/SmartThingsDevelopers/DeviceDrivers/tree/main/lightbulb-lan-esp8266/app) in the ESP8266 NodeMCU board and it's wired according to the [schematics](https://github.com/SmartThingsDevelopers/DeviceDrivers/tree/main/lightbulb-lan-esp8266/app#schematics) (LAN Lightbulb)
 
@@ -58,7 +58,7 @@ You'll find further installation instructions in each sample and in the Tutorial
 
 - [Zigbee SmartThings Multipurpose sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)
 - [LAN RGB Light Bulb Tutorial](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501)
-- [Z-Wave Aeotec Tri Sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
+- [Z-Wave Aeotec MultiSensor 6 Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
 
 ## More Information
 

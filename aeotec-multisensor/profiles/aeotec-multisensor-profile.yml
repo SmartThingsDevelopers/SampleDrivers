@@ -1,0 +1,29 @@
+name: aeotec-multisensor-pr
+components:
+- id: main
+  capabilities:
+  - id: motionSensor
+    version: 1
+  - id: illuminanceMeasurement
+    version: 1
+  - id: temperatureMeasurement
+    version: 1
+  - id: battery
+    version: 1
+  - id: healthCheck
+    version: 1
+  categories:
+    - name: MotionSensor
+metadata:
+  deviceType: MotionSensor
+  ocfDeviceType: x.com.st.d.sensor.motion
+  deviceTypeId: MotionSensor
+preferences:
+  - title: "Motion sensor sensitivity"
+    description: "0-5 where 0 disables the sensor (default 5)"
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 5
+      default: 5
