@@ -6,14 +6,13 @@ Protocol: LAN
 
 ## Prerequisites
 
-Any version SmartThings Hub with firmware version 38.x or greater and a LAN device ready to connect.
+A SmartThings Hub with firmware version 38.x or greater and a LAN device ready to connect.
 
 For this tutorial, we used an ESP8266 but the same principles can be used to integrate any LAN-based device that supports SSDP and HTTP.
 
 1. Set up the SmartThings CLI according to the [configuration document](https://github.com/SmartThingsCommunity/smartthings-cli/blob/master/packages/cli/doc/configuration.md).
 2. Add the [Edge Driver plugin](https://github.com/SmartThingsCommunity/edge-alpha-cli-plugin#set-up) to the CLI.
 3. Configure your development environment for the [SmartThingsEdgeDrivers](https://github.com/SmartThingsCommunity/SmartThingsEdgeDriversBeta)
-4. A SmartThings hub with firmware version 000.038.000XX or greater and an Aeotec Trisensor.
 
 ## Uploading Your Driver to SmartThings
 
@@ -49,7 +48,7 @@ smartthings edge:drivers:publish
 smartthings edge:drivers:install
 ```
 
-You should see the confirmation message: "Driver {driver-id} installed to Hub {hub-id}"
+You should see the confirmation message: `Driver {driver-id} installed to Hub {hub-id}`
 
 6. Use your WiFi router or the [SmartThings IDE](https://account.smartthings.com/login) > My Hubs to locate and copy the IP Address for your Hub.
 
@@ -61,7 +60,7 @@ smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 
 ## Onboarding your New Device
 
-1. Setup the ESP8266 board and embedded app according to [these instruction](./app).
+1. Setup the ESP8266 board and embedded app according to [these instructions](./app).
 2. Open the _SmartThings App_ and follow these steps _(notice that you must add the device in the same location your Hub is installed)_:
 
    - Select **Add (+)** and then **Device**.
