@@ -1,7 +1,0 @@
-zwaveManufacturer:
-  - id: "Aeotec/ZW005-X"
-    deviceLabel: Aeotec Trisensor
-    manufacturerId: 0x0371
-    productId: 0x0005
-    deviceProfileName: aeotec-trisensor-pr
-  
