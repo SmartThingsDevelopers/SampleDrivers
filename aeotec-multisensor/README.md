@@ -18,7 +18,7 @@ _Note: Take a look at the installation tutorial in our [Developer's Community](h
 1. Compile the driver:
 
 ```
-       smartthings edge:drivers:package driver/
+smartthings edge:drivers:package driver/
 ```
 
 2. Next, create a channel for your driver
@@ -42,7 +42,7 @@ smartthings edge:drivers:publish
 5. If the package was successfully created, you can call the command below and follow the on-screen prompts to install the Driver in your Hub:
 
 ```
-       smartthings edge:drivers:install
+smartthings edge:drivers:install
 ```
 
 You should see the confirmation message: "Driver {driver-id} installed to Hub {hub-id}"
@@ -52,7 +52,7 @@ You should see the confirmation message: "Driver {driver-id} installed to Hub {h
 7. From a computer on the same local network as your Hub, open a new terminal window and run the command to get the logs from all the installed drivers.
 
 ```
-       smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
+smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 ```
 
 ## Onboarding your New Device
@@ -74,5 +74,5 @@ If your Device paired correctly and the Driver was applied, you should not see a
 
 ## Additional Notes
 
-1. This driver allows you to change the "Motion Sensitivity" configuration parameter of the device.
+1. This driver allows you to change 2 configuration parameters of the device.
 2. When experimenting with Z-Wave devices, remember to exclude the device before re-pairing.
