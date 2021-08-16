@@ -1,4 +1,0 @@
-name: 'Z-Wave Aeotec Trisensor'
-packageKey: 'zwave-aeotec-trisensor'
-permissions:
-  zwave: {}
