@@ -28,7 +28,7 @@ Example integrating an ESP8266 board via LAN. This device is configured to work 
 - Switch Level
 - Color Control
 
-[Sample Code](./lightbulb-lan-esp8266/driver)
+[Sample Code](./lightbulb-lan-esp8266)
 
 ## Z-Wave Aeotec MultiSensor 6
 
