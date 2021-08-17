@@ -60,7 +60,7 @@ smartthings edge:drivers:logcat --hub-address=x.x.x.x -a
 1. Open the SmartThings App and go to the location where the hub is installed.
 2. Go to Add (+) > Device or select _Scan Nearby_ (If you have more than one, select the corresponding Hub as well)
 
-3. Put your device in pairing mode; the specifications will vary by manufacturer (for the [Aeotec MultiSensor 6](<(https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2684/Aeon%20Labs%20MultiSensor%206%20manual.pdf)>), press the device’s action button once).
+3. Put your device in pairing mode; the specifications will vary by manufacturer (for the [Aeotec MultiSensor 6](https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2684/Aeon%20Labs%20MultiSensor%206%20manual.pdf), press the device’s action button once).
 
 4. Keep the terminal view open until the "infoChanged" lifecycle event is received and the driver starts getting the `REPORT` commands from the device.
 
