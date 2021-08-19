@@ -92,4 +92,4 @@ Take a look at the announcement of [SmartThings Edge](https://community.smartthi
 
 ## Support
 
-If you have any questions about the specification document, visit [community.smartthings.com](community.smartthings.com).
+If you have any questions about the specification document, visit [community.smartthings.com](https://community.smartthings.com/c/developer-programs).
