@@ -42,26 +42,22 @@ Example integrating the Aeotec’s MultiSensor 6 which has the following Capabil
 
 ## `thingsim` device simulator
 
-Example **LAN Device Integration** through an **RPC Server** which supports the following capabilities:
-
-- Switch
+Example **LAN device integration** through an **RPC Server** supporting the **Switch** capability.
 
 [Sample Code](./thingsim)
 
 ## Custom Capability Integration
 
-Example **Zigbee Driver** that implements a single-attribute custom capability.
+**Zigbee Driver** example that implements a **stock** and a **custom** capabilities.
 
-- _<namespace>.fancySwitch_
 - Refresh
+- `<namespace>`.fancySwitch
 
 [Sample Code](./custom-capability)
 
 ## Hello World example
 
-Example Driver to get started with **LAN-based device integrations**. This basic implmentation supports the following capabilities:
-
-- Switch
+Example Driver to get started with **LAN-based device integrations**. This implementation uses the **Switch** capability.
 
 [Sample Code](./hello-world)
 
