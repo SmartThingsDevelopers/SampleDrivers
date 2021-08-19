@@ -84,6 +84,7 @@ You'll find further installation instructions in each sample and in the Tutorial
 - [Zigbee SmartThings Multipurpose sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)
 - [LAN RGB Light Bulb Tutorial](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501)
 - [Z-Wave Aeotec MultiSensor 6 Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
+- [Tutorial | Writing an RPC Client Edge Device Driver](https://community.smartthings.com/t/tutorial-writing-an-rpc-client-edge-device-driver/230285).
 
 ## More Information
 
