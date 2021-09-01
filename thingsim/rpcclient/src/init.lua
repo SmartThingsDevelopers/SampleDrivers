@@ -17,11 +17,11 @@ local Driver = require "st.driver"
 local log = require "log"
 
 -- the coroutine runtime's socket interface
-local socket = require "cosock".socket
+local cosock = require "cosock"
 
 -- driver specific libraries from this repo
-local client = require "rpcclient"
-local discovery = require "discovery"
+local client = cosock.asyncify "rpcclient"
+local discovery = cosock.asyncify "discovery"
 
 ----------------------------------------------------------------------------------------------------
 -- Local Helpers
