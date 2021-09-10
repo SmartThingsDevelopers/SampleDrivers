@@ -17,11 +17,11 @@ local Driver = require "st.driver"
 local log = require "log"
 
 -- the coroutine runtime's socket interface
-local socket = require "cosock".socket
+local cosock = require "cosock"
 
 -- driver specific libraries from this repo
-local client = require "rpcclient"
-local discovery = require "discovery"
+local client = cosock.asyncify "rpcclient"
+local discovery = cosock.asyncify "discovery"
 
 ----------------------------------------------------------------------------------------------------
 -- Local Helpers
@@ -59,16 +59,9 @@ end
 -- Device and Driver Event Handlers
 ----------------------------------------------------------------------------------------------------
 
--- handle setup for newly added devices (before device_init)
-local function device_added(driver, device)
-  log.info("[" .. tostring(device.id) .. "] New ThingSim RPC Client device added")
-
-  -- nothing to do here, everything happens in init this is just here for completeness, if you
-  -- don't need this callback you can remove it
-end
-
--- initialize device at startup or when added
-local function device_init(driver, device)
+-- shared helper for emitting the initial state of a device when
+-- either added fresh or when the driver starts up
+local function initialize_device_state(device)
   log.info("[" .. tostring(device.id) .. "] Initializing ThingSim RPC Client device")
 
   local client = assert(get_thing_client(device))
@@ -89,6 +82,16 @@ local function device_init(driver, device)
       device:get_field("name") or device.device_network_id
     )
   end
+end
+
+-- initialize device at startup
+local function device_init(driver, device)
+  initialize_device_state(device)
+end
+
+-- initialize device when added
+local function device_added(driver, device)
+  initialize_device_state(device)
 end
 
 -- discover not already known devices listening on the network
