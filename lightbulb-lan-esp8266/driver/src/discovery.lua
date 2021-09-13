@@ -116,7 +116,7 @@ function disco.start(driver, opts, cons)
     if device_res ~= nil then
       device_res = parse_ssdp(device_res)
       log.info('===== DEVICE FOUND IN NETWORK...')
-      log.info('===== DESTINATION ADDRESS AND METADATA INFO AT: '..device_res.location)
+      log.info('===== DEVICE DESCRIPTION AT: '..device_res.location)
 
       local device = fetch_device_info(device_res.location)
       return create_device(driver, device)
