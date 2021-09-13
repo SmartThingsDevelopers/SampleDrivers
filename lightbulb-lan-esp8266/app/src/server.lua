@@ -35,7 +35,8 @@ local function push_state(data)
   data.uuid = DEV.HUB.ext_uuid
   local data = sjson.encode(data)
 
-  print('PUSH STATE\r\nURL: '..url..'\r\nDATA: '..data)
+  print('PUSH STATE\r\nURL:  '..url..
+        '\r\nDATA: '..data)
   return http.post(
     url,'Content-Type: application/json\r\n',data,
     function(code, data) print(code, data) end)
@@ -76,9 +77,10 @@ function server_start()
         DEV.HUB.port = qs.port
         DEV.HUB.ext_uuid = qs.ext_uuid
         print(
-          '\r\nPING\r\nHUB LOCATION: http://'..
+          '\r\nPING\r\n'..
+          'HUB LOCATION:    http://'..
           qs.ip..':'..qs.port..
-          '\r\nEXT_UUID: '..qs.ext_uuid)
+          '\r\nEXT_UUID:        '..qs.ext_uuid..'\r\n')
         return conn:send(res.ok_200())
       end
 
