@@ -17,7 +17,7 @@ wifi.ap.config(WIFI_AP_CONFIG)
 -----------------------------
 -- Init main network services
 function wifi_sta_start(ssid, pwd) -- credentials will be forgotten as soon as device reboots
-  local wifi_config = { ssid=ssid, pwd=pwd, save=false }
+  local wifi_config = { ssid=ssid, pwd=pwd, save=true }
   wifi.sta.config(wifi_config)
   print('connecting to wifi...')
 end
