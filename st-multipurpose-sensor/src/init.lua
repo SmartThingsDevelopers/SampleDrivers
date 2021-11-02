@@ -7,18 +7,14 @@ local contact_sensor_defaults = require "st.zigbee.defaults.contactSensor_defaul
 local data_types = require "st.zigbee.data_types"
 local common = require("common")
 
-local function acceleration_handler(driver, device, value, zb_rx)
-    device:emit_event(capabilities.accelerationSensor.acceleration(value.value == 1 and "active" or "inactive"))
-end
-
 local function ias_zone_status_change_handler(driver, device, zb_rx)
-    if (device.preferences.useOnGarageDoor ~= "Yes") then
+    if (device.preferences.garageSensor ~= "Yes") then
         contact_sensor_defaults.ias_zone_status_change_handler(driver, device, zb_rx)
     end
 end
 
 local function ias_zone_status_attr_handler(driver, device, zone_status, zb_rx)
-    if (device.preferences.useOnGarageDoor ~= "Yes") then
+    if (device.preferences.garageSensor ~= "Yes") then
         contact_sensor_defaults.ias_zone_status_attr_handler(driver, device, zone_status, zb_rx)
     end
 end
@@ -45,7 +41,7 @@ local handlers = {
     },
     attr = {
         [common.MFG_CLUSTER] = {
-            [common.ACCELERATION_ATTR_ID] = acceleration_handler,
+            [common.ACCELERATION_ATTR_ID] = common.acceleration_handler,
             [common.X_AXIS_ATTR_ID] = common.axis_handler(2, false),
             [common.Y_AXIS_ATTR_ID] = common.axis_handler(3, false),
             [common.Z_AXIS_ATTR_ID] = common.axis_handler(1, false)
