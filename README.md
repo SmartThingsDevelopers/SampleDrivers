@@ -40,6 +40,27 @@ Example integrating the Aeotec’s MultiSensor 6 which has the following Capabil
 
 [Sample Code](./aeotec-multisensor)
 
+## `thingsim` device simulator
+
+Example **LAN device integration** through an **RPC Server** supporting the **Switch** capability.
+
+[Sample Code](./thingsim)
+
+## Custom Capability Integration
+
+**Zigbee Driver** example that implements a **stock** and a **custom** capabilities.
+
+- Refresh
+- `<namespace>`.fancySwitch
+
+[Sample Code](./custom-capability)
+
+## Hello World example
+
+Example Driver to get started with **LAN-based device integrations**. This implementation uses the **Switch** capability.
+
+[Sample Code](./hello-world)
+
 ## Installation Tutorial
 
 Make sure you have the following:
@@ -56,9 +77,10 @@ Make sure you have the following:
 
 You'll find further installation instructions in each sample and in the Tutorial Community posts:
 
-- [Zigbee SmartThings Multipurpose sensor Tutorial](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)
-- [LAN RGB Light Bulb Tutorial](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501)
-- [Z-Wave Aeotec MultiSensor 6 Tutorial](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
+- [Tutorial | Creating Drivers for Zigbee Devices with SmartThings Edge](https://community.smartthings.com/t/creating-drivers-for-zigbee-devices-with-smartthings-edge/229502)
+- [Tutorial | Creating Drivers for LAN Devices with SmartThings Edge](https://community.smartthings.com/t/creating-drivers-for-lan-devices-with-smartthings-edge/229501)
+- [Tutorial | Creating Drivers for ZWave Devices with SmartThings Edge](https://community.smartthings.com/t/creating-drivers-for-zwave-devices-with-smartthings-edge/229503)
+- [Tutorial | Writing an RPC Client Edge Device Driver](https://community.smartthings.com/t/tutorial-writing-an-rpc-client-edge-device-driver/230285)
 
 ## More Information
 
@@ -66,4 +88,4 @@ Take a look at the announcement of [SmartThings Edge](https://community.smartthi
 
 ## Support
 
-If you have any questions about the specification document, visit [community.smartthings.com](community.smartthings.com).
+If you have any questions about the specification document, visit [community.smartthings.com](https://community.smartthings.com/c/developer-programs).

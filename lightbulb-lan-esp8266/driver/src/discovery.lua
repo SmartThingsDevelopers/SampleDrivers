@@ -22,7 +22,7 @@ end
 -- <device_location>/<device_name>.xml
 -- from SSDP Response Location header
 local function fetch_device_info(url)
-  log.trace('fetching device metadata...')
+  log.info('===== FETCHING DEVICE METADATA...')
   local res = {}
   local _, status = http.request({
     url=url,
@@ -38,7 +38,7 @@ local function fetch_device_info(url)
   local meta = xmlres.root.root.device
 
   if not xmlres.root or not meta then
-    log.error('failed to fetch device metadata at: '..url)
+    log.error('===== FAILED TO FETCH METADATA AT: '..url)
     return nil
   end
 
@@ -63,7 +63,7 @@ local function find_device()
   upnp:settimeout(config.MC_TIMEOUT)
 
   -- broadcasting request
-  log.trace('scanning...')
+  log.info('===== SCANNING NETWORK...')
   upnp:sendto(config.MSEARCH, config.MC_ADDRESS, config.MC_PORT)
 
   -- Socket will wait n seconds
@@ -77,12 +77,12 @@ local function find_device()
   if res ~= nil then
     return res
   end
-  log.error('No devices found in network')
   return nil
 end
 
 local function create_device(driver, device)
-  log.trace('creating device...')
+  log.info('===== CREATING DEVICE...')
+  log.info('===== DEVICE DESTINATION ADDRESS: '..device.location)
   -- device metadata table
   local metadata = {
     type = config.DEVICE_TYPE,
@@ -115,10 +115,13 @@ function disco.start(driver, opts, cons)
 
     if device_res ~= nil then
       device_res = parse_ssdp(device_res)
+      log.info('===== DEVICE FOUND IN NETWORK...')
+      log.info('===== DEVICE DESCRIPTION AT: '..device_res.location)
+
       local device = fetch_device_info(device_res.location)
       return create_device(driver, device)
     end
-    log.error('device not found')
+    log.error('===== DEVICE NOT FOUND IN NETWORK')
   end
 end
 
