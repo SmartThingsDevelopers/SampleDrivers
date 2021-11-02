@@ -19,7 +19,8 @@ metadata:
   ocfDeviceType: x.com.st.d.sensor.motion
   deviceTypeId: MotionSensor
 preferences:
-  - title: "Motion Clear Time"
+  - name: "motionClearTime"
+    title: "Set Motion Clear Time"
     description: "PIR time in seconds (default 240)"
     required: false
     preferenceType: integer
@@ -27,7 +28,8 @@ preferences:
       minimum: 10
       maximum: 3600
       default: 240
-  - title: "Motion sensor sensitivity"
+  - name: "motionSensorSensitivity"
+    title: "Set Motion sensor sensitivity"
     description: "0-5 where 0 disables the sensor (default 5)"
     required: false
     preferenceType: integer
