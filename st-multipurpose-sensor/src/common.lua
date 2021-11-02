@@ -33,7 +33,7 @@ function common.axis_handler(axis_index, invert)
             device:set_field(INTERIM_XYZ, current_value)
         end
         
-        if axis_index == 3 and device.preferences.useOnGarageDoor == "Yes" then
+        if axis_index == 3 and device.preferences.garageSensor == "Yes" then
             -- if this is the z-index and we're using as a garage door, send contact events
             if math.abs(value.value) > 900 then
                 device:emit_event(capabilities.contactSensor.contact.closed())
@@ -42,6 +42,10 @@ function common.axis_handler(axis_index, invert)
             end
         end
     end
+end
+
+function common.acceleration_handler(driver, device, value, zb_rx)
+    device:emit_event(capabilities.accelerationSensor.acceleration(value.value == 1 and "active" or "inactive"))
 end
 
 function common.get_cluster_configurations(manufacturer)

@@ -1,6 +1,7 @@
 local zcl_clusters = require "st.zigbee.zcl.clusters"
 local capabilities = require "st.capabilities"
 local battery = capabilities.battery
+local battery_defaults = require "st.zigbee.defaults.battery_defaults"
 local common = require("common")
 local utils = require "st.utils"
 
@@ -24,6 +25,7 @@ local smartthings_multi_sensor = {
     zigbee_handlers = {
         attr = {
             [common.MFG_CLUSTER] = {
+                [common.ACCELERATION_ATTR_ID] = common.acceleration_handler,
                 [common.X_AXIS_ATTR_ID] = common.axis_handler(3, true), -- lua indexes from 1
                 [common.Y_AXIS_ATTR_ID] = common.axis_handler(2, false),
                 [common.Z_AXIS_ATTR_ID] = common.axis_handler(1, false)
@@ -32,6 +34,9 @@ local smartthings_multi_sensor = {
               [zcl_clusters.PowerConfiguration.attributes.BatteryVoltage.ID] = battery_handler
             }
         }
+    },
+    lifecycle_handlers = {
+        init = battery_defaults.build_linear_voltage_init(2.3, 3.0)
     },
 	can_handle = can_handle
 }
