@@ -3,7 +3,8 @@ local utils = require('st.utils')
 local neturl = require('net.url')
 local log = require('log')
 local json = require('dkjson')
-local http = require('socket.http')
+local cosock = require "cosock"
+local http = cosock.asyncify "socket.http"
 local ltn12 = require('ltn12')
 
 local command_handler = {}
