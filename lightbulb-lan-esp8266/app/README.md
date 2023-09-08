@@ -75,7 +75,7 @@
 
 1.  Open the _NodeMCU shell_ to monitor logs:
 
-        sudo screen /dev/ttyUSB 115200
+        sudo screen /dev/ttyUSB0 115200
 
 ### Authentication
 
