@@ -39,13 +39,13 @@ smartthings edge:channels:enroll
 4. Assign your driver to the channel
 
 ```
-smartthings edge:drivers:publish
+smartthings edge:drivers:assign
 ```
 
 5. If the package was successfully created, you can call the command below and follow the on-screen prompts to install the Driver in your Hub:
 
 ```
-smartthings edge:drivers:assign
+smartthings edge:drivers:install
 ```
 
 You should see the confirmation message: `Driver {driver-id} installed to Hub {hub-id}`
